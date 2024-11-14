@@ -1,0 +1,16 @@
+{
+  "expenses": [
+    {
+      "id": "b618",
+      "description": "Movies",
+      "amount": 15,
+      "category": "entertainment"
+    },
+    {
+      "id": "a429",
+      "description": "Cake",
+      "amount": 100,
+      "category": "food"
+    }
+  ]
+}
