@@ -1,16 +1,40 @@
 {
   "expenses": [
     {
-      "id": "b618",
+      "id": "15bb",
       "description": "Movies",
-      "amount": 15,
+      "amount": 50,
       "category": "entertainment"
     },
     {
-      "id": "a429",
-      "description": "Cake",
-      "amount": 100,
+      "id": "f2ec",
+      "description": "Milk",
+      "amount": 10,
       "category": "food"
+    },
+    {
+      "id": "3c4a",
+      "description": "Egss",
+      "amount": 15,
+      "category": "food"
+    },
+    {
+      "id": "fcfa",
+      "description": "Phone",
+      "amount": 100,
+      "category": "utilities"
+    },
+    {
+      "id": "db9b",
+      "description": "Video games",
+      "amount": 50,
+      "category": "entertainment"
+    },
+    {
+      "id": "bd08",
+      "description": "pens and papers",
+      "amount": 18,
+      "category": "utilities"
     }
   ]
 }

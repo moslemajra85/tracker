@@ -1,21 +1,29 @@
 import { useState } from 'react';
- 
 const AddExpenses = ({ addExpense }) => {
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState('');
   const [category, setCategory] = useState('');
 
+  const reset = () => {
+    setDescription('');
+    setAmount('');
+    setCategory('');
+  };
   return (
     <>
       <h1 className="text-primary text-center mb-2">Expense Tracker</h1>
       <form
         onSubmit={(event) => {
           event.preventDefault();
+
+          if (!description || !amount || !category) return;
           addExpense({
             description,
             amount,
             category,
           });
+
+          reset();
         }}
         className="border rounded p-4"
       >

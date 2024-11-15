@@ -4,11 +4,13 @@ import AddExpenses from './components/AddExpenses';
 import ExpensesList from './components/ExpensesList';
 const App = () => {
   const [data, setData] = useState([]);
+  const [filterd, setFilterd] = useState([]);
 
   const getData = async () => {
     try {
       const response = await axios.get('http://localhost:5000/expenses');
       setData(response.data);
+      setFilterd(response.data);
     } catch (error) {
       console.error(error);
     }
@@ -36,10 +38,18 @@ const App = () => {
     // update ui (state)
     setData(data.filter((item) => item.id !== id));
   };
+
+  const filter = (category) => {
+    setFilterd(data.filter((item) => item.category.includes(category)));
+  };
   return (
     <div className="container mt-5" style={{ maxWidth: '600px' }}>
       <AddExpenses addExpense={addExpense} />
-      <ExpensesList deleteExpense={deleteExpense} data={data} />
+      <ExpensesList
+        filter={filter}
+        deleteExpense={deleteExpense}
+        data={filterd}
+      />
     </div>
   );
 };
